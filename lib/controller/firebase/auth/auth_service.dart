@@ -44,7 +44,7 @@ class Authservice {
      await Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(
-          builder: (context) => Home2Screen(),
+          builder: (context) => const Home2Screen(),
         ),
         (route) => false,
       );

@@ -8,13 +8,13 @@ import 'package:hotpotproject/views/admin/foodadd.dart';
 import 'package:hotpotproject/views/admin/orders_screen.dart';
 
 class Home2Screen extends StatefulWidget {
-  const Home2Screen({Key? key}) : super(key: key);
+  const Home2Screen({super.key});
 
   @override
-  _Home2ScreenState createState() => _Home2ScreenState();
+  Home2ScreenState createState() => Home2ScreenState();
 }
 
-class _Home2ScreenState extends State<Home2Screen> {
+class Home2ScreenState extends State<Home2Screen> {
   int selectedTabIndex = 0;
   @override
   void initState() {

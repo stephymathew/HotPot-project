@@ -1,5 +1,7 @@
 // import 'dart:developer';
 
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -19,10 +21,10 @@ class FoodUpdateScreen extends StatefulWidget {
   final Dishes dish;
 
   @override
-  _FoodUpdateScreenState createState() => _FoodUpdateScreenState();
+  FoodUpdateScreenState createState() => FoodUpdateScreenState();
 }
 
-class _FoodUpdateScreenState extends State<FoodUpdateScreen> {
+class FoodUpdateScreenState extends State<FoodUpdateScreen> {
   // String selectedValue = 'burger';
   final List<String> category = [
     'burger',
@@ -330,7 +332,6 @@ class _FoodUpdateScreenState extends State<FoodUpdateScreen> {
                               builder: (context) => const Home2Screen()),
                         );
                       } else {
-                        print("not added");
                         return;
                       }
                     },

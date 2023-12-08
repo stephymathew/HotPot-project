@@ -7,7 +7,7 @@ import 'package:hotpotproject/model/food_models.dart';
 
 ValueNotifier<List<Dishes>> dishNotifier = ValueNotifier([]);
 
-class Repository {
+class Repository with ChangeNotifier {
   final FirebaseFirestore productInstance = FirebaseFirestore.instance;
   Future<void> addProduct(Dishes model) async {
     final CollectionReference data =
@@ -104,10 +104,8 @@ class Repository {
         'dishRating': dish.dishRating,
         'isPopular': dish.isPopular,
       });
-
-      print('Data Updated Successfully');
     } catch (e) {
-      print('Error updating data: $e');
+      e;
     }
   }
 
@@ -117,10 +115,8 @@ class Repository {
           .collection("ProductCollections")
           .doc(dishId)
           .delete();
-
-      print('Data deleted Successfully');
     } catch (e) {
-      print('Error updating data: $e');
+      e;
     }
   }
 }

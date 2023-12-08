@@ -4,7 +4,7 @@ import 'package:hotpotproject/model/food_models.dart';
 import 'package:hotpotproject/views/admin/home2.dart';
 
 class DescriptionAdminPage extends StatelessWidget {
-   const DescriptionAdminPage({Key? key, required this.dish});
+   const DescriptionAdminPage({super.key, required this.dish});
   final Dishes dish;
 
   @override

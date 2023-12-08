@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:developer';
 import 'dart:io';
 
@@ -282,7 +284,6 @@ class FoodaddingScreenState extends State<FoodaddingScreen> {
                         );
 
                         await Repository().addProduct(collectedData);
-                        // print('imageurl: $imageUrl');
                         _showSnackbar('food added uccessfully');
 
                         Navigator.push(
