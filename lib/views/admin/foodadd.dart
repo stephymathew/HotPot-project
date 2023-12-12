@@ -110,8 +110,8 @@ class FoodAddScreen extends StatelessWidget {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 20),
-                                  child: Text(
-                                    dish.dishPrice,
+                                  child: Text("₹ ${dish.dishPrice}",
+                                  
                                     style: GoogleFonts.aboreto(
                                         textStyle:
                                             const TextStyle(fontSize: 15),

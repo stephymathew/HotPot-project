@@ -39,8 +39,8 @@ class DescriptionAdminPage extends StatelessWidget {
                 alignment: Alignment.bottomRight,
                 child: Padding(
                   padding: const EdgeInsets.only(right: 20, bottom: 20),
-                  child: Text(
-                    dish.dishPrice,
+                  child: Text("₹${dish.dishPrice}",
+                    
                     style: const TextStyle(color: Colors.white, fontSize: 35),
                   ),
                 ),

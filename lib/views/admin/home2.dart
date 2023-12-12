@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hotpotproject/controller/firebase/product_service/product_service.dart';
@@ -233,16 +234,27 @@ class Home2ScreenState extends State<Home2Screen> {
                                   decoration: BoxDecoration(
                                     shape: BoxShape.rectangle,
                                     borderRadius: BorderRadius.circular(40),
-                                    image: DecorationImage(
-                                      image: dishes[index].dishImage.isNotEmpty
-                                          ? Image.network(
-                                                  dishes[index].dishImage)
-                                              .image
-                                          : Image.asset(
-                                                  'asset/image/close-up-burger-with-black-background_23-2148234990.webp')
-                                              .image,
-                                      fit: BoxFit.cover,
-                                    ),
+                                    image:DecorationImage(image: CachedNetworkImageProvider(dishes[index].dishImage,),fit: BoxFit.cover)
+                                    //  DecorationImage(
+                                    //   image: dishes[index].dishImage.isNotEmpty
+                                    //       ? Image.network(
+                                    //           dishes[index].dishImage,
+                                    //           loadingBuilder:
+                                    //               (ctx, a, loadingProgress) {
+                                    //           if (loadingProgress == null)
+                                    //             return a;
+                                    //           return Center(
+                                    //             child:
+                                    //                 CircularProgressIndicator(
+                                                  
+                                    //             ),
+                                    //           );
+                                    //         }).image
+                                    //       : Image.asset(
+                                    //               'asset/image/close-up-burger-with-black-background_23-2148234990.webp')
+                                    //           .image,
+                                    //   fit: BoxFit.cover,
+                                    // ),
                                   ),
                                 ),
                                 Text(

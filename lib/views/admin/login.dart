@@ -39,7 +39,7 @@ class LoginScreen extends StatelessWidget {
                   alignment: Alignment.center,
                   child: SizedBox(
                     width: 350,
-                    child: TextFormField(
+                    child: TextFormField(autovalidateMode: AutovalidateMode.onUserInteraction,
                       controller: _textcontroller,
                       cursorColor: Colors.white,
                       keyboardType: TextInputType.text,
@@ -66,12 +66,12 @@ class LoginScreen extends StatelessWidget {
                       //     _formKey.currentState!.reset();
                       //   }
                       // },
-                      onChanged: (value) {
-                         _formKey.currentState!.validate();
-                        // if (value.isNotEmpty) {
-                        //   //_formKey.currentState!.reassemble();
-                        // }
-                      },
+                      // onChanged: (value) {
+                      //    _formKey.currentState!.validate();
+                      //   // if (value.isNotEmpty) {
+                      //   //   //_formKey.currentState!.reassemble();
+                      //   // }
+                      // },
                     ),
                   ),
                 ),

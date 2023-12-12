@@ -96,7 +96,7 @@ class _ListScreenState extends State<ListScreen> {
                                                     .removeCart(data);
                                               },
                                               child: const Padding(
-                                                padding:  EdgeInsets.only(left: 20),
+                                                padding:  EdgeInsets.only(left: 0),
                                                 child: Icon(Icons.close),
                                               ))
                                         ],
